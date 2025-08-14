@@ -148,27 +148,58 @@ footer{padding:50px 0}
   #lead-content h2{font-size:1em}
   #lead-content a{font-size:0.9em;padding:5px 10px}
 }
+/* === Uniform project cards: force consistent 300x238 thumbnails === */
+.project {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-/* Uniform project thumbnails */
+/* Kill float/absolute from the template and lock image box to 300x238 */
 .project .project-image {
+  float: none !important;
   width: 300px;
+  height: 238px;
+  flex: 0 0 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .project .project-image img {
-  width: 300px;
-  height: 238px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crops without distortion to 300x238 */
   display: block;
   border-radius: 4px;
 }
-/* Optional: make images fill width on very small screens */
-@media (max-width: 576px) {
+
+/* Reset the absolute positioning from the template */
+.project .project-info {
+  position: static !important;
+  top: auto !important;
+  transform: none !important;
+  margin-left: 0 !important;
+  padding: 15px;
+  text-align: left;
+  flex: 1 1 auto;
+}
+
+/* Mobile: stack image over text */
+@media (max-width: 768px) {
+  .project { 
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .project .project-image {
+    width: 100%;
+    height: auto;
+    flex: none;
+  }
   .project .project-image img {
     width: 100%;
     height: auto;
-    aspect-ratio: 300 / 238;
+    aspect-ratio: 300 / 238; /* keeps the same look while being responsive */
     object-fit: cover;
   }
 }
