@@ -1,100 +1,83 @@
 /*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
-
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
+    Swapneel Bhatt — personal portfolio
+    Vanilla JS, no dependencies. Loaded directly by index.html (no minified build step).
 */
 
-(function($) {
+(function () {
+  'use strict';
 
-    // Show current year
-    $("#current-year").text(new Date().getFullYear());
+  document.documentElement.classList.remove('no-js');
 
-    // Remove no-js class
-    $('html').removeClass('no-js');
+  // Current year in the footer
+  var year = document.getElementById('current-year');
+  if (year) year.textContent = new Date().getFullYear();
 
-    // Animate to section when nav is clicked
-    $('header a').click(function(e) {
+  // Sticky header styling once scrolled past the top
+  var header = document.getElementById('site-header');
+  var onScroll = function () {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-        // Treat as normal link if no-scroll class
-        if ($(this).hasClass('no-scroll')) return;
+  // Mobile menu
+  var toggle = document.getElementById('menu-toggle');
+  var closeMenu = function () {
+    document.body.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  toggle.addEventListener('click', function () {
+    var open = document.body.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('#menu a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
 
-        e.preventDefault();
-        var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top;
-
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
-
-        // Hide the menu once clicked if mobile
-        if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
-        }
+  // Back to top
+  var toTop = document.getElementById('to-top');
+  if (toTop) {
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+  }
 
-    // Scroll to top
-    $('#to-top').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
+  // Reveal sections as they enter the viewport
+  var revealables = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var revealer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        revealer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px' });
+
+    revealables.forEach(function (el, i) {
+      // Stagger siblings slightly so grids cascade instead of popping at once
+      el.style.transitionDelay = (i % 2) * 90 + 'ms';
+      revealer.observe(el);
     });
+  } else {
+    revealables.forEach(function (el) { el.classList.add('visible'); });
+  }
 
-    // Scroll to first element
-    $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top;
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, 500);
-    });
-
-    // Create timeline
-    $('#experience-timeline').each(function() {
-
-        $this = $(this); // Store reference to this
-        $userContent = $this.children('div'); // user content
-
-        // Create each timeline block
-        $userContent.each(function() {
-            $(this).addClass('vtimeline-content').wrap('<div class="vtimeline-point"><div class="vtimeline-block"></div></div>');
+  // Highlight the nav link for whichever section is in view
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('#menu a');
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
         });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
 
-        // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
-            $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
-        });
-
-        // Add dates to the timeline if exists
-        $this.find('.vtimeline-content').each(function() {
-            var date = $(this).data('date');
-            if (date) { // Prepend if exists
-                $(this).parent().prepend('<span class="vtimeline-date">'+date+'</span>');
-            }
-        });
-
-    });
-
-    // Open mobile menu
-    $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
-    });
-
-    // Close mobile menu
-    $('#mobile-menu-close').click(function() {
-        $('header, body').removeClass('active');
-    });
-
-    // Load additional projects
-    $('#view-more-projects').click(function(e){
-        e.preventDefault();
-        $(this).fadeOut(300, function() {
-            $('#more-projects').fadeIn(300);
-        });
-    });
-
-})(jQuery);
+    sections.forEach(function (section) { spy.observe(section); });
+  }
+})();

@@ -2,321 +2,391 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio</title>
+  <title>Swapneel Bhatt — Robotics Engineer</title>
+  <meta name="description" content="Swapneel Bhatt — robotics engineer specialising in manipulation, control and robot learning. Columbia University MS Mechanical Engineering.">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <div id="mobile-menu-open" class="shadow-large">
-    <i class="fa fa-bars" aria-hidden="true"></i>
-  </div>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-  <header>
-    <div id="mobile-menu-close">
-      <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+  <header id="site-header">
+    <div class="nav-inner">
+      <a href="#top" class="brand">SB<span>.</span></a>
+      <nav>
+        <ul id="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <ul id="menu" class="shadow">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
   </header>
 
-  <div id="lead">
-    <div id="lead-content">
-      <h1>Swapneel Bhatt</h1>
-      <h2>Robotics Engineer</h2>
-      <a href="SwapneelBhattResumeFallUpdated2025.pdf" download="swapneelBhattResume.pdf" class="btn-rounded-white">Download Resume</a>
-    </div>
-
-    <div id="lead-overlay"></div>
-
-    <div id="lead-down">
-      <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-    </div>
-  </div>
-
-  <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4"><h2 class="heading">About Me</h2></div>
-        <div class="col-md-8">
-          <p>
-            
-              Hi! I'm Swapneel, a Graduate Robotics student at Columbia University. At Columbia, my current focus lies in advanced robotic control and manipulation: developing dexterous robotic systems and motion optimization methods through projects like the MiniBee bimanual manipulator in the ROAM Lab.
-              I've worked as a robotics engineer for 2 years at Augmentus and have received my Bachelor's in Mechanical Engineering from NTU. 
-              I have over 3 years of full-time,internship and research experience in the development and maintenance of robotic software. I am a fast and willing learner, demonstrating expertise in engineering technologies, programming languages, and engineering principles, with a proven ability to create, optimize, and manage software applications for robotic systems.
-          <p>
-            I'm always on the lookout for opportunities to grow both my professional and interpersonal skills, and someone who loves approaching new problems and trying new approaches.
-          </p>
-        </div>
+  <section id="top" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Robotics Engineer</p>
+      <h1>Swapneel<br>Bhatt</h1>
+      <p class="hero-lead">
+        3+ years of industry experience building robotic software, backed by a graduate
+        education in advanced robotic control and manipulation.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="SwapneelBhattResume2026.pdf" download="SwapneelBhattResume2026.pdf" class="btn btn-ghost">
+          <i class="fa fa-download" aria-hidden="true"></i> Résumé
+        </a>
       </div>
     </div>
-  </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to about">
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </a>
+  </section>
 
-  <div id="education">
-    <h2 class="heading">Education</h2>
-
-    <div class="education-block">
-      <h3>Columbia University</h3>
-      <span class="education-date">Aug 2024 – Dec 2025</span>
-      <h4>Master of Science in Mechanical Engineering</h4>
-      <p>
-        Majoring in Mechanical Engineering with a Concentration in Robotics and Control.
-        Relevant coursework includes Robot Learning, Probabilistic Robotics, Model Predictive Control, Optimal Control, Applied Robotics: Software and Algorithms, Robotics Studio, and more.
-      </p>
+  <section id="about" class="section">
+    <div class="wrap split">
+      <div class="split-aside">
+        <p class="eyebrow">01 — About</p>
+        <h2 class="heading">About Me</h2>
+      </div>
+      <div class="split-body reveal">
+        <p class="lead-para">
+          I'm Swapneel, a Robotics Engineer at <strong>Hyundai Motor Group's</strong> Core R&amp;D lab in Singapore,
+          working on vision-guided assembly research and programming for automated EV manufacturing.
+        </p>
+        <p>
+          I recently completed my Master's in Robotics at <strong>Columbia University</strong>, where I focused on
+          advanced control and dexterous manipulation through projects like the <strong>MiniBEE</strong> bimanual
+          manipulator in the ROAM Lab. Before that, I spent 2 years as a robotics engineer at
+          <strong>Augmentus</strong> and earned my Bachelor's in Mechanical Engineering from <strong>NTU</strong>.
+        </p>
+        <p>
+          With 3+ years of combined experience developing robotic software, I love digging into new problems,
+          trying new approaches, and growing both professionally and personally along the way.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="education-block">
-      <h3>Nanyang Technological University</h3>
-      <span class="education-date">Aug 2018 – June 2022</span>
-      <h4>Bachelor of Engineering in Mechanical Engineering</h4>
-      <p>
-        Specialized in Robotics and Mechatronics. Studied Robot Kinematics, Machine Vision, Mechatronic System Design, Mechatronics Signals Interfacing, Microprocessor Systems, Introductory Data Science, and core Mechanical Engineering courses such as Heat Transfer, Thermodynamics, Machine Element Design, Computer-Aided Engineering, Theory of Mechanisms, and Fluid Mechanics.
-      </p>
+  <section id="experience" class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">02 — Experience</p>
+      <h2 class="heading">Where I've Worked</h2>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <span class="timeline-date">Mar 2026 — Present</span>
+          <div class="timeline-card">
+            <h3>Hyundai Motor Group Innovation Centre</h3>
+            <h4>Robotic Manipulator Engineer, Core R&amp;D Lab · Singapore</h4>
+            <ul>
+              <li>Design and implement end-to-end robot manipulation algorithms for automated vehicle part assembly and logistics.</li>
+              <li>Integrate industrial machine vision systems and multi-sensor setups (3D cameras, vision pipelines) to enable robust pose estimation and robotic part picking using industrial robotic arms.</li>
+              <li>Develop imitation learning policies for autonomous trajectory generation and dexterous part manipulation for advanced R&amp;D projects.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <span class="timeline-date">Jul 2022 — Jul 2024</span>
+          <div class="timeline-card">
+            <h3>Augmentus</h3>
+            <h4>Robotics &amp; Application Engineer · Singapore</h4>
+            <ul>
+              <li>Developed C# code for a no-code robotics platform, reducing engineering costs for clients by up to 73%.</li>
+              <li>Engineered robot kinematics and motion planning solvers to execute over 5 different robotic manufacturing processes.</li>
+              <li>Spearheaded robotic deployment at customer sites for welding, spraying and sandblasting applications for major customers.</li>
+              <li>Practiced TDD and rigorous code reviews to ensure high-quality deployments.</li>
+              <li>Worked with industrial vision systems (Keyence CV-X) and LMI Gocator laser scanners.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <span class="timeline-date">Jan 2021 — Dec 2021</span>
+          <div class="timeline-card">
+            <h3>Bosch</h3>
+            <h4>Corporate Research Intern, Robotics · Singapore</h4>
+            <ul>
+              <li>Programmed industrial robot arm motion for a novel automated plastic-waste sorting system for SEA markets.</li>
+              <li>Created a digital twin on ROS for an ABB robotic arm and supporting mechatronic systems on a conveyor belt.</li>
+              <li>Integrated ABB programs and the digital twin with a Vision AI-based plastic waste sorting system, increasing productivity by 60%.</li>
+              <li>Organized regular research progress presentations to Bosch Corporate Research scientists and management.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <span class="timeline-date">May 2020 — Aug 2020</span>
+          <div class="timeline-card">
+            <h3>Transforma Robotics</h3>
+            <h4>Robot Navigation Intern</h4>
+            <ul>
+              <li>Built a navigation package for a disinfectant robot aimed at mitigating COVID-19 spread.</li>
+              <li>Collaborated with software leads to refine application requirements and learn ROS architecture.</li>
+              <li>Used the ROS Navigation Stack for path planning in mapped environments, enabling ~4× faster disinfection.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
     </div>
-  </div>
+  </section>
 
-  <div id="projects" class="background-alt">
-    <h2 class="heading">Projects</h2>
-    <div class="container">
-      <div class="row">
+  <section id="education" class="section">
+    <div class="wrap">
+      <p class="eyebrow">03 — Education</p>
+      <h2 class="heading">Education</h2>
 
-        <!-- Mini Bi-Manual End Effector -->
-        <div class="project shadow-large">
+      <div class="edu-grid">
+        <article class="edu-card reveal">
+          <div class="edu-top">
+            <h3>Columbia University</h3>
+            <span class="pill">Aug 2024 — Dec 2025</span>
+          </div>
+          <h4>MS, Mechanical Engineering</h4>
+          <p>Robotics and Control concentration.</p>
+          <p class="edu-courses">
+            <span>Probabilistic Robotics</span><span>Reinforcement Learning</span><span>Applied Robotics</span><span>Model Predictive Control</span><span>Modern Controls</span><span>Data Science</span>
+          </p>
+        </article>
+
+        <article class="edu-card reveal">
+          <div class="edu-top">
+            <h3>Nanyang Technological University</h3>
+            <span class="pill">Aug 2018 — Jun 2022</span>
+          </div>
+          <h4>BEng, Mechanical Engineering</h4>
+          <p>Mechatronics and Robotics specialization.</p>
+          <p class="edu-courses">
+            <span>Intro. to Robotics</span><span>Machine Vision</span><span>Mechatronics System Design</span><span>Theory of Mechanisms</span><span>CAD/CAM</span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-dark">
+    <div class="wrap">
+      <p class="eyebrow">04 — Projects</p>
+      <h2 class="heading">Selected Work</h2>
+
+      <div class="project-grid">
+
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/MiniBEE_Policy.png" alt="Mini Bi-Manual End Effector" />
+            <img src="images/MiniBEE_Policy.png" alt="MiniBEE mini bi-manual end effector policy rollout" loading="lazy">
           </div>
           <div class="project-info">
             <h3>MiniBEE: Mini Bi-Manual End Effector</h3>
-            <p><strong>ROAM Lab, Columbia University — Jan 2025 – Present</strong></p>
-            <p>
-              • <a href="https://roamlab.github.io/minibee/"> Project Website</a> <br>
-              • Developing a miniature bi-fingered end effector to improve robot dexterity under Prof. Matei Ciocarlie and the ROAM Lab.<br>
-              • Conducting kinematic analysis and design optimization in ROS2 to maximize workspace utilization and finger performance.<br>
-              • Utilizing the MiniBEE to train behavioral cloning diffusion policies for dexterous manipulation tasks.
+            <p class="project-meta">ROAM Lab, Columbia University · Jan — Sept 2025</p>
+            <ul>
+              <li>Developed a miniature bi-fingered end effector for improved robot dexterity under Prof. Matei Ciocarlie and the ROAM Lab.</li>
+              <li>Kinematic analysis and design optimization in ROS2 to maximize workspace utilization and finger performance.</li>
+              <li>Trained behavioral cloning diffusion policies for dexterous manipulation tasks.</li>
+              <li><strong>Published at ICRA 2026.</strong></li>
+            </ul>
+            <p class="project-links">
+              <a href="https://roamlab.github.io/minibee/" target="_blank" rel="noopener">Project Website <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </p>
           </div>
-        </div>
+        </article>
 
-        <div class="project shadow-large">
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/traj_overlay.png" alt="EKF SLAM with Trajectory Overlay" />
+            <img src="images/traj_overlay.png" alt="EKF SLAM trajectory overlay" loading="lazy">
           </div>
           <div class="project-info">
-            <h3>Extended Kalman Filter Slam</h3>
-            <p><strong>Probabilistic Robotics Course, Columbia University </strong></p>
-            <p>
-              • <a href="https://github.com/swapneel001/ekf_slam"> GitHub Repository</a> <br>
-              • Developed an EKF SLAM implementation in ROS2 for Probabilistic Robotics Course Project <br>
-              • Utilised a TurtleBot2 simulation on Gazebo with Rviz2 for visualization. <br>
-              • Based on algorithms from Thrun's "Probabilistic Robotics" textbook. <br>
-              • Further improvements include graph-based SLAM techniques, and more sophisticated covariance models.
+            <h3>Extended Kalman Filter SLAM</h3>
+            <p class="project-meta">Probabilistic Robotics · Columbia University · Oct — Dec 2025</p>
+            <ul>
+              <li>Implemented EKF SLAM (Thrun's <em>Probabilistic Robotics</em>) as a ROS2 package for online simultaneous localization and mapping with known data association on a TurtleBot3.</li>
+              <li>Designed the full state vector and covariance architecture — robot pose, landmark positions, cross-covariances.</li>
+              <li>Built the prediction/measurement-update pipeline using range-bearing observations from corner detection on colored cylindrical landmarks.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/swapneel001/ekf_slam" target="_blank" rel="noopener">GitHub Repository <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </p>
           </div>
-        </div>
+        </article>
 
-
-        <!-- MPC-ISM Control Project -->
-        <div class="project shadow-large">
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/Joint_Tracking_Errors.jpg" alt="MPC-ISM Control Project" />
+            <img src="images/Joint_Tracking_Errors.jpg" alt="Joint tracking error plots from MPC-ISM controller" loading="lazy">
           </div>
           <div class="project-info">
-            <h3>MPC–ISM Control for Robot Manipulators</h3>
-            <p><strong>Collaborative Project with Onur Calisir — Columbia University, 2025</strong></p>
-            <p>
-              • <a href="https://github.com/onurcalisir27/MPC-Project" target="_blank">GitHub Repository</a><br>
-              • Implemented a hierarchical three-layer controller combining <strong>Model Predictive Control (MPC)</strong> and <strong>Integral Sliding Mode (ISM)</strong> to achieve robust tracking on nonlinear robotic manipulators.<br>
-              • Designed inverse dynamics linearization to decouple nonlinear MIMO systems, followed by ISM uncertainty rejection and MPC for optimal trajectory tracking.<br>
-              • Simulated multi-rate control with fast ISM (1 ms) and slower MPC (20 ms) sampling for a 3-DOF manipulator under uncertainty injection.<br>
-              • Observed that while MPC handled nominal tracking efficiently, ISM improved robustness against high-magnitude uncertainty by adapting control inputs dynamically.<br>
-              • Based on the IEEE/ASME paper “MPC for Robot Manipulators with Integral Sliding Modes Generation” by Incremona et al. (2017). 
+            <h3>MPC–ISM Control for Manipulators</h3>
+            <p class="project-meta">With Onur Calisir · Columbia University, 2025</p>
+            <ul>
+              <li>Hierarchical three-layer controller combining Model Predictive Control and Integral Sliding Mode for robust tracking on nonlinear manipulators.</li>
+              <li>Inverse dynamics linearization to decouple nonlinear MIMO systems, with ISM uncertainty rejection and MPC trajectory tracking.</li>
+              <li>Multi-rate simulation — fast ISM (1 ms) and slower MPC (20 ms) — on a 3-DOF manipulator under injected uncertainty.</li>
+              <li>Based on Incremona et al. (2017), IEEE/ASME.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/onurcalisir27/MPC-Project" target="_blank" rel="noopener">GitHub Repository <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </p>
-            <a href="https://github.com/onurcalisir27/MPC-Project"> Project GitHub</a>
           </div>
-        </div>
+        </article>
 
-
-        <!-- Bipedal Walking Robot -->
-        <div class="project shadow-large">
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/BipedalRobotResized.png" alt="Bipedal walking robot prototype" />
+            <img src="images/BipedalRobotResized.png" alt="Bipedal walking robot prototype" loading="lazy">
           </div>
           <div class="project-info">
             <h3>Bipedal Walking Robot</h3>
-            <p><strong>Robotics Studio Project, Columbia University</strong></p>
-            <p>
-              - Designed, fabricated, assembled, and programmed a bipedal walking robot from scratch with a teammate.<br>
-              - Performed kinematic analysis of bipedal gait using CAD keyframing and function smoothing.<br>
-              - Achieved a final walking speed of 10.4 cm/s.
+            <p class="project-meta">Robotics Studio · Columbia University</p>
+            <ul>
+              <li>Designed, fabricated, assembled and programmed a bipedal walking robot from scratch with a teammate.</li>
+              <li>Kinematic analysis of bipedal gait using CAD keyframing and function smoothing.</li>
+              <li>Achieved a final walking speed of 10.4 cm/s.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://www.youtube.com/watch?v=qTBiGcmHPKc" target="_blank" rel="noopener">Watch Video <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </p>
-            <a href="https://www.youtube.com/watch?v=qTBiGcmHPKc" target="_blank">Watch Video</a>
           </div>
-        </div>
+        </article>
 
-        <!-- FYP -->
-        <div class="project shadow-large">
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/MobileManResized.png" alt="HMI with stitched fisheye cameras for stair-climbing robot" />
+            <img src="images/MobileManResized.png" alt="Stair-climbing construction robot with stitched fisheye camera feed" loading="lazy">
           </div>
           <div class="project-info">
             <h3>Final Year Project</h3>
-            <p>
-              Developed camera-feed integration for an HMI on a construction-site stair-climbing robot. Performed a literature review of image stitching for 360° views with fisheye cameras and sourced appropriate sensors. Implemented stitching and prepared frames for directional feeds.
-            </p>
-            <a href="FYPPresentation.pdf" download="swapneelFYPPresentation.pdf">Download Project Presentation</a>
-          </div>
-        </div>
-
-        <!-- Bosch Waste Sorting -->
-        <div class="project shadow-large">
-          <div class="project-image">
-            <img src="images/BoschRobot.JPG" alt="ABB IRB120 performing plastic waste sorting with CV and THz sensing" />
-          </div>
-          <div class="project-info">
-            <h3>Robotic Waste Sorting at Robert Bosch</h3>
-            <p>
-              Programmed the IRB120 robot for automated plastic waste sorting on a conveyor using a hybrid AI system (Terahertz sensor + computer vision). Supported classification model development and integrated cameras and mechatronic devices in ROS. Built a live RViz digital twin with metrics on plastic types and picking rate.
+            <p class="project-meta">Nanyang Technological University</p>
+            <ul>
+              <li>Developed camera-feed integration for an HMI on a construction-site stair-climbing robot.</li>
+              <li>Literature review of image stitching for 360° views with fisheye cameras, and sensor sourcing.</li>
+              <li>Implemented stitching and prepared frames for directional feeds.</li>
+            </ul>
+            <p class="project-links">
+              <a href="FYPPresentation.pdf" download="SwapneelFYPPresentation.pdf">Download Presentation <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </p>
           </div>
-        </div>
+        </article>
 
-        <!-- Dishwasher Robot -->
-        <div class="project shadow-large">
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/DishwasherRobotResized.JPG" alt="6-DOF dishwashing robot prototype" />
+            <img src="images/DishwasherRobotResized.JPG" alt="Six degree-of-freedom dishwashing robot prototype" loading="lazy">
           </div>
           <div class="project-info">
             <h3>Robotic Dishwasher</h3>
-            <p>
-              Engineered a 6-DOF robotic arm and supporting mechatronics to automate dishwashing. Designed trays for dirty/clean utensils and a rinsing/scrubbing station to clean 5+ utensil types. Led controls using ROS, MoveIt!, and Dynamixel Workbench for motion planning and actuation.
-            </p>
+            <p class="project-meta">Nanyang Technological University</p>
+            <ul>
+              <li>Engineered a 6-DOF robotic arm and supporting mechatronics to automate dishwashing.</li>
+              <li>Designed trays for dirty/clean utensils and a rinsing/scrubbing station handling 5+ utensil types.</li>
+              <li>Led controls using ROS, MoveIt! and Dynamixel Workbench for motion planning and actuation.</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <!-- Mechatronics System Design -->
-        <div class="project shadow-large">
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/BallCollector.JPG" alt="Tennis ball collecting robot for course competition" />
+            <img src="images/BallCollector.JPG" alt="Tennis ball collecting robot built for a course competition" loading="lazy">
           </div>
           <div class="project-info">
-            <h3>Mechatronics System Design Course Project</h3>
-            <p>
-              Designed and prototyped the winning robot for a course competition. Programmed motion and search strategy to locate tennis balls and return them to a drop-off point; integrated sensors with the VEX microcontroller for boundary, pickup, and drop-off status.
-            </p>
+            <h3>Tennis Ball Collector</h3>
+            <p class="project-meta">Mechatronics System Design · NTU</p>
+            <ul>
+              <li>Designed and prototyped the winning robot for a course competition.</li>
+              <li>Programmed motion and search strategy to locate tennis balls and return them to a drop-off point.</li>
+              <li>Integrated sensors with the VEX microcontroller for boundary, pickup and drop-off status.</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <!-- Cyborg Beetle -->
-        <div class="project shadow-large">
+        <article class="project reveal">
           <div class="project-image">
-            <img src="images/CyborgBeetleResized.jpg" alt="Cyborg beetle swarm exploration simulations in ARGoS" />
+            <img src="images/CyborgBeetleResized.jpg" alt="Cyborg beetle swarm exploration research" loading="lazy">
           </div>
           <div class="project-info">
-            <h3>Cyborg Beetle — Part-Time Research Assistant</h3>
-            <p>
-              Part-time research with Prof. Hirotaka Sato's team (Apr 2020 – Feb 2021). Designed experiments to evaluate swarm exploration efficiency (sizes 10–100) across algorithms (E. coli-like motion, fixed/variable step length, etc.) using ARGoS 3, and logged performance for comparative analysis.
-            </p>
+            <h3>Cyborg Beetle — Swarm Research</h3>
+            <p class="project-meta">Research Assistant · Apr 2020 — Feb 2021</p>
+            <ul>
+              <li>Part-time research with Prof. Hirotaka Sato's team.</li>
+              <li>Designed experiments evaluating swarm exploration efficiency (sizes 10–100) across algorithms — E. coli-like motion, fixed and variable step length — in ARGoS 3.</li>
+              <li>Logged performance data for comparative analysis.</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="experience" class="background-alt">
-    <h2 class="heading">Experience</h2>
-    <div id="experience-timeline">
-      <div data-date="July 2022 – July 2024">
-        <h3>Augmentus</h3>
-        <h4>Robotics Engineer</h4>
-        <p>- Developed C# for a no-code robotics platform, reducing engineering cost for clients by up to 73%.</p>
-        <p>- Engineered algorithms for robot kinematics and motion planning to execute processes accurately and efficiently.</p>
-        <p>- Deployed applications for welding, spraying, and sandblasting, reducing programming time by up to 21× and increasing productivity by 10×.</p>
-        <p>- Practiced TDD and rigorous code reviews to ensure high-quality deployments.</p>
-        <p>- Experienced with industrial vision systems (Keyence CV-X) and LMI Gocator laser scanners.</p>
-      </div>
+  <section id="skills" class="section">
+    <div class="wrap">
+      <p class="eyebrow">05 — Skills</p>
+      <h2 class="heading">Tools &amp; Technologies</h2>
+      <ul class="skills-list">
+        <li>ROS2</li>
+        <li>Python</li>
+        <li>OpenCV</li>
+        <li>C#</li>
+        <li>ABB RAPID</li>
+        <li>URScript</li>
+        <li>MoveIt!</li>
+        <li>Gazebo</li>
+        <li>Unity</li>
+        <li>SolidWorks</li>
+        <li>AutoCAD</li>
+      </ul>
+      <p class="skills-note">Fluent in English and Hindi · elementary German (A2 certified)</p>
+    </div>
+  </section>
 
-      <div data-date="Jan 2021 – Dec 2021">
-        <h3>Robert Bosch SEA</h3>
-        <h4>Corporate Research Intern (Robotics)</h4>
-        <p>Worked on mechatronic system development and robotic arm manipulation:</p>
-        <p>- Programmed in Python/C++ with ROS to integrate stereo cameras, sensors, and a robotic arm.</p>
-        <p>- Developed ROS manipulation code for robotic pick-up.</p>
-        <p>- Used industrial PLCs for sensor integration and related applications.</p>
-      </div>
-
-      <div data-date="May 2020 – Aug 2020">
-        <h3>Transforma Robotics</h3>
-        <h4>Robot Navigation Intern</h4>
-        <p>- Built a navigation package for a disinfectant robot aimed at mitigating COVID-19 spread.</p>
-        <p>- Collaborated with software leads to refine application requirements and learn ROS architecture.</p>
-        <p>- Used the ROS Navigation Stack for path planning in mapped environments, enabling ~4× faster disinfection.</p>
+  <section id="contact" class="section section-dark">
+    <div class="wrap contact-inner">
+      <p class="eyebrow">06 — Contact</p>
+      <h2>Let's build something<br><span class="accent">that moves.</span></h2>
+      <p class="contact-sub">Open to robotics roles and research collaborations.</p>
+      <div class="contact-links">
+        <a href="mailto:swapneel.bhatt@columbia.edu" class="btn btn-primary">
+          <i class="fa fa-envelope" aria-hidden="true"></i> swapneel.bhatt@columbia.edu
+        </a>
+        <a href="tel:+6594248065" class="btn btn-ghost">
+          <i class="fa fa-phone" aria-hidden="true"></i> +65 9424 8065
+        </a>
       </div>
     </div>
-  </div>
-
-  <div id="skills">
-    <h2 class="heading">Skills</h2>
-    <ul>
-      <li>ROS</li>
-      <li>Python</li>
-      <li>ABB RAPID</li>
-      <li>URScript</li>
-      <li>C#</li>
-      <li>Unity</li>
-      <li>SolidWorks</li>
-      <li>AutoCAD</li>
-    </ul>
-  </div>
-
-  <div id="contact">
-    <h2>Get in Touch</h2>
-    <div id="contact-details" style="color: white;">
-      <p><strong>Email:</strong> <a href="mailto:swapneel.bhatt@columbia.edu" style="color: white;">swapneel.bhatt@columbia.edu</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+16462408908" style="color: white;">+1 646 240 8908</a></p>
-    </div>
-  </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-5 copyright">
-          <p>Template sourced from devportfolio by RyanFitzgerald.</p>
-        </div>
-        <div class="col-sm-2 top">
-          <span id="to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
-        </div>
-        <div class="col-sm-5 social">
-          <ul>
-            <li>
-              <a href="https://github.com/swapneel001" target="_blank" aria-label="GitHub">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/swapneelbhatt" target="_blank" aria-label="LinkedIn">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div class="wrap footer-inner">
+      <p class="copyright">© <span id="current-year"></span> Swapneel Bhatt</p>
+      <ul class="social">
+        <li>
+          <a href="https://github.com/swapneel001" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/swapneelbhatt" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <button id="to-top" aria-label="Back to top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </button>
     </div>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/scripts.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
